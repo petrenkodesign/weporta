@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+/* Bootstrap custom */
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.btn {
+  background-color: rgb(25, 84, 183);
+  text-align: center;
+  border-radius: 0;
+  border: none;
+}
+/* Navigation menu */
+.top-navbar .navbar-nav {
+  font-size: 18px;
+  color: rgb(33, 43, 53);
+  font-weight: bold;
+  line-height: 1.2;
+}
+.top-navbar .btn {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.8;
+  width: 118px;
+  height: 40px;
+}
+@media (max-width: 500px) {
+  .top-navbar .btn {
+    display: none;
+  }
+}
+
+/* Banner */
+.banner {
+  min-height: 850px;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  /* padding-top: 8rem; */
+  /* padding-bottom: 8rem; */
+  background: url("../img/banner.png");
+  /* background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("../img/banner.png");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/banner.png"); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.banner h1 {
+  font-size: 83px;
+  font-family: "Rajdhani";
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+
+  margin: 0;
+  padding: 0;
+}
+.banner h3 {
+  font-size: 18px;
+  font-family: "Work Sans";
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+}
+.banner .btn {
+  font-size: 16px;
+  font-family: "Rajdhani";
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2.5;
+  width: 147px;
+  height: 50px;
+}
+@media (max-width: 500px) {
+  .banner {
+    min-height: auto;
+    height: 100vh;
+  }
+  .banner h1 {
+    font-size: 40px;
+  }
+}
+/* Banner animation */
+.banner {
+  /* animation-iteration-count:infinite; */
+  animation-timing-function: steps(200, end);
+  animation-direction: alternate;
+  animation-duration: 3s;
+  animation-name: opa;
+}
+@keyframes opa {
+  from {
+    width: 300%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Services */
+#services {
+  padding: 90px 0;
+}
+#services .row div {
+  flex: initial;
+  width: 290px;
+  height: 352px;
+  margin: 0 auto;
+}
+#services .row div:hover {
+  box-shadow: 0 20px 15px rgba(25,84,183,0.12);
+  cursor: default;
+}
+#services .service-icon {
+  min-height: 79px;
+}
+#services .icon-analytics::before {
+  content: url("../img/analytics.png");
+}
+#services .icon-price::before {
+  content: url("../img/price.png");
+}
+#services .icon-ads::before {
+  content: url("../img/prom.png");
+}
+#services .icon-inventory::before {
+  content: url("../img/inventory.png");
+}
+#services .icon-logistic::before {
+  content: url("../img/logistic.png");
+}
+#services .icon-ebay::before {
+  content: url("../img/ebay.png");
+}
+#services .content-section-heading h1 {
+  font-size: 66px;
+  font-family: "Rajdhani";
+  font-weight: bold;
+}
+#services .content-section-heading h3 {
+  font-size: 18px;
+  font-family: "Work Sans";
+}
+#services .row h3 {
+  font-size: 26px;
+  font-family: "Rajdhani";
+  font-weight: bold;
+  color: rgb(33, 43, 53);
+  line-height: 1.2;
+  text-align: center;
+  padding: 20px 0px;
+}
+#services .row p {
+  font-size: 18px;
+  font-family: "Work Sans";
+  color: rgb(69, 79, 91);
+  line-height: 1.353;
+  text-align: center;
+  padding-bottom: 30px;
+  min-height: 126px;
+}
+#services .row div .btn {
+  display: none;
+  background: #1954b7;
+  font-size: 16px;
+  /* font-weight: bold; */
+  /* width: 147px;
+  height: 45px; */
+}
+#services .row div .btn:hover {
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  #services .content-section-heading h1 {
+    font-size: 40px;
+  }
+  #services .row div .btn {
+    display: inline !important;
+  }
+}
+/* Help */
+#helpbut h3 {
+  font-weight: Bold;
+  font-size: 50px;
+  padding: 50px 0;
+  text-transform: uppercase;
+}
+#helpbut .btn {
+  font-weight: Bold;
+  font-size: 16px;
+  padding: 16px 32px;
+  text-transform: uppercase;
+}
+#helpbut img {
+  margin-left: -66px;
+  margin-right: 20px;
+}
+@media (max-width: 500px) {
+  #helpbut h3 {
+    font-size: 40px;
+  }
+  #helpbut img {
+    margin-left: -40px;
+    margin-right: 0px;
+  }
+  #helpbut .btn {
+    padding: 12px;
+  }
+}
+
+/* Fee */
+#fee {
+  min-height: 650px;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 6rem;
+  /* padding-bottom: 8rem; */
+  /* background: linear-gradient(180deg, rgb(255,255,255) 50%, rgb(25,84,183) 50%), url("../img/fee.png"); */
+  background: rgb(25,84,183) url("../img/fee.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+#fee h2 {
+  font-size: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#fee h1 {
+  font-size: 137px;
+  color: rgb(48, 125, 246);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#fee h3 {
+  font-size: 37px;
+  font-weight: bold;
+}
+
+/* Maps */
+#map {
+  min-height: 800px;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  background: rgb(25,84,183) url("../img/map.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: auto;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  #map {
+    min-height: auto;
+    background-position: center center;
+    background-size: contain;
+  }
+  #map .container {
+    margin-bottom: 50px;
+  }
+}
+#map h1 {
+  font-size: 66px;
+  font-weight: bold;
+}
+#map h3 {
+  font-family: "Work Sans";
+  font-size: 18px;
+}
+
+/* About */
+#about {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: url("../img/hitw-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#about .border-row {
+  height:60px;
+  border-right: 2px solid rgb(25, 84, 183);
+}
+#about .row h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(25, 84, 183);
+}
+#about .row p {
+  font-size: 31px;
+  line-height: 1;
+  /* font-weight: bold; */
+}
+#about .h-txt {
+  font-size: 66px;
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  #about .border-row {
+    border:none;
+  }
+  #about .row p {
+    font-size: 22px;
+  }
+}
+
+/* Testimonials */
+#testimonials {
+  min-height: 800px;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 2rem;
+  background:  url("../img/testimonials.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+#testimonials h1{
+  min-height: 91px;
+}
+#testimonials h3{
+  min-height: 132px;
+}
+#testimonials .col-lg-5:nth-child(1) h1::before {
+  content: url("../img/logo-wh.png");
+}
+#testimonials .col-lg-5:nth-child(2) h1::before {
+  content: url("../img/logo-honey.png");
+}
+#testimonials .col-lg-5:nth-child(3) h1::before {
+  content: url("../img/logo-tf.png");
+}
+@media (max-width: 500px) {
+  #testimonials {
+    background-position: 60% center;
+  }
+}
+#testimonials .carousel-indicators {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  justify-content: left;
+  padding: 0;
+  margin: 0;
+}
+#testimonials .carousel-indicators .active {
+  background-color: rgb(25,84,183);
+}
+#testimonials .col-lg-5 {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: slfout;
+  animation-duration: 3s;
+  animation-name: slfout;
+}
+@keyframes slfout {
+from {
+  opacity: 0.1;
+}
+to {
+  opacity: 1;
+}}
+
+/* CTA Form */
+#ctaform {
+  min-height: 816px;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  background: rgb(25,84,183);
+  color: #fff;
+}
+#ctaform input {
+  background:none;
+  color:#fff;
+  border:none;
+  border-bottom: 1px solid #fff;
+}
+#ctaform input::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+#ctaform input:focus, #ctaform select:focus {
+  border: none;
+  /* border-bottom: 1px solid #fff; */
+  box-shadow: 0 20px 15px rgba(0,0,0,0.12);
+}
+#ctaform select {
+  background: none !important;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  min-height: 38px;
+}
+#ctaform select option {
+  color: #000;
+}
+#ctaform input[type=submit] {
+  border: none;
+}
+#ctaform .arrows {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  background: #030f39;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 8px;
+  border-radius: 50%;
+  margin-left:10px;
+}
+#ctaform .bar span, #ctaform .bar b {
+  font-size: 32px;
+}
+#ctaform .bar s {
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  #ctaform {
+    min-height: 680px;
+  }
+  #ctaform .buttonbar .col-lg-3 {
+    margin: 10px 0;
+  }
+  #ctaform input[type=submit] {
+    font-size: 42px;
+  }
+  #ctaform .buttonbar a {
+    margin-left: 0;
+  }
+}
+#ctaform .formpoint {
+  -webkit-animation: slfout 2s;
+  -moz-animation: slfout 2s;
+  -ms-animation: slfout 2s;
+  -o-animation: slfout 2s;
+  animation: slfout 2s;
+}
+#ctaform .alert a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Footer */
+#fh {
+  min-height: 113px;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  background: rgb(25,84,183) url("../img/fh-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+footer.footer {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+footer.footer a {
+  color: rgb(69, 79, 91);
+  text-decoration: none;
+}
+footer.footer p{
+  font-size: 17px;
+  font-family: "Work Sans";
+  color: rgb(69, 79, 91);
+  text-align: left;
+  padding: 8px 0;
+}
+footer.footer h3{
+  font-size: 22px;
+  font-family: "Rajdhani";
+  color: rgb(33, 43, 53);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 30px;
+}
+footer.footer .address::before {
+  content: url("../img/icon-address.png");
+  margin-right: 10px;
+}
+footer.footer .email::before {
+  content: url("../img/icon-email.png");
+  margin-right: 10px;
+}
+footer.footer .phone::before {
+  content: url("../img/icon-phone.png");
+  margin-right: 10px;
+}
+footer.footer .phone {
+  margin-top: 30px;
+}
+footer.footer p span {
+  margin-left: 36px
+}
+@media (max-width: 500px) {
+  footer.footer p {
+    font-size: 12px;
+  }
+}
+
+/* Other staff */
+.scroll-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 45px;
+}
+.scroll-to-top:focus, .scroll-to-top:hover {
+  color: white;
+}
+.scroll-to-top:hover {
+  background: #343a40;
+}
+.scroll-to-top i {
+  font-weight: 800;
+}
+
+/*  */
+#tmg {
+  position: absolute;
+  margin-top: -200px;
+  margin-left: 100px;
+  animation-iteration-count:infinite;
+  animation-duration: 2s;
+  animation-timing-function: steps(40, end);
+  animation-name: rotate;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
