@@ -329,11 +329,12 @@ body {
   width: 100%;
   height: auto;
   padding-top: 2rem;
-  background:  url("../img/testimonials.png");
+  /* background:  url("../img/testimonials.png"); */
+  background: url("../img/tbg.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
+  color: #212b35;
 }
 #testimonials h1{
   min-height: 91px;
@@ -341,26 +342,26 @@ body {
 #testimonials h3{
   min-height: 132px;
 }
-#testimonials .col-lg-5:nth-child(1) h1::before {
+/* #testimonials .col-lg-5:nth-child(1) h1::before {
   content: url("../img/logo-wh.png");
-}
-#testimonials .col-lg-5:nth-child(2) h1::before {
+} */
+/* #testimonials .col-lg-5:nth-child(2) h1::before {
   content: url("../img/logo-honey.png");
 }
 #testimonials .col-lg-5:nth-child(3) h1::before {
   content: url("../img/logo-tf.png");
-}
-@media (max-width: 500px) {
+} */
+/* @media (max-width: 500px) {
   #testimonials {
     background-position: 60% center;
   }
-}
+} */
 #testimonials .carousel-indicators {
   position: relative;
   right: auto;
   bottom: auto;
   left: auto;
-  justify-content: left;
+  /* justify-content: left; */
   padding: 0;
   margin: 0;
 }
@@ -368,11 +369,88 @@ body {
   background-color: rgb(25,84,183);
 }
 #testimonials .col-lg-5 {
+  max-width: 100%;
   -webkit-animation-duration: 3s;
   -webkit-animation-name: slfout;
   animation-duration: 3s;
   animation-name: slfout;
 }
+#testimonials .carousel-indicators li {
+  background-color: #cedff9;
+}
+#testimonials .header {
+  text-align:center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 49pt;
+  margin-bottom: 60px;
+}
+#testimonials .content {
+  min-height: 326px;
+}
+#testimonials .q_content {
+  min-height: 303px;
+}
+#testimonials .q_txt {
+  font-family: "Work Sans";
+  font-size: 16pt;
+  padding: 30px;
+  min-width: 650px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.18);
+}
+#testimonials .q_txt::after {
+  content : url(../img/anchor.png);
+  margin-top: 26px;
+  margin-left: 60%;
+  display: block;
+  position: absolute;
+}
+#testimonials .q_img {
+  text-align: center;
+}
+#testimonials .q_img img{
+  max-width: 100%;
+  height: auto;
+}
+#testimonials .q_sub {
+  font-size: 16pt;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+#testimonials .q_sub img{
+  margin-right: 20px;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  #testimonials .q_txt {
+    min-width: auto;
+    width: 100%;
+    font-size: 18px;
+  }
+  #testimonials .q_sub {
+    text-align: center;
+  }
+  #testimonials .q_sub img{
+    max-width: 20%;
+  }
+  #testimonials .header {
+    font-size: 32pt;
+  }
+}
+@media (max-width: 400px) {
+  #testimonials .q_txt q{
+    display: block;
+    height: 222px;
+  }
+  #testimonials .q_img img {
+    height: 178px;
+  }
+  #testimonials .q_sub {
+    height: 60px;
+  }
+}
+
 @keyframes slfout {
 from {
   opacity: 0.1;
@@ -416,8 +494,12 @@ to {
 #ctaform select option {
   color: #000;
 }
-#ctaform input[type=submit] {
+#ctaform button[type=submit] {
   border: none;
+  background: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
 }
 #ctaform .arrows {
   display: inline-block;
@@ -444,7 +526,7 @@ to {
   #ctaform .buttonbar .col-lg-3 {
     margin: 10px 0;
   }
-  #ctaform input[type=submit] {
+  #ctaform button[type=submit] {
     font-size: 42px;
   }
   #ctaform .buttonbar a {
@@ -546,7 +628,55 @@ footer.footer p span {
 .scroll-to-top i {
   font-weight: 800;
 }
-
+.lang_pop {
+  margin:0 30px;
+  font-weight:bold;
+  text-align:center;
+}
+.lang_pop .up_arrow {
+   margin-left:4px;
+   width: 0;
+   height: 0;
+   border-left: 5px solid transparent;
+   border-right: 5px solid transparent;
+   border-bottom: 5px solid rgba(0,0,0,0.1);
+}
+.lang_pop .selector {
+  border:1px solid rgba(0,0,0,0.1);
+  position:absolute;
+  margin-left:-50px;
+  width:120px;
+  text-align:center;
+  background:#fff;
+  border-radius:8px;
+  padding:10px 0;
+}
+.lang_pop .selector ul {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  line-height:2;
+}
+.lang_pop .selector li:hover {
+  color: rgb(25, 84, 183);
+}
+.lang_pop .selector li, .lang_pop span {
+  cursor:pointer;
+}
+.lang_pop .content {
+  display: none;
+}
+.lang_pop:hover .content {
+  display: block;
+}
+@media (max-width: 500px) {
+  .lang_pop .selector {
+    margin-left:-60px;
+  }
+  .navbar-toggler {
+    padding: 5px 10px;
+  }
+}
 /*  */
 #tmg {
   position: absolute;

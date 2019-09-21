@@ -1,10 +1,7 @@
 
-// Reload page by lang code
-// langsw();
-
-// Document ready, when page load
 $( document ).ready(function() {
 
+    // Services animation control
     $("#services .row div").hover(
       function () {
         $(this).find(".btn").show();
@@ -16,6 +13,7 @@ $( document ).ready(function() {
       }
     );
 
+    // Control button of prima form
     $('a[href*=\\#]').on('click',
       function(e){
         var hash = e.currentTarget.hash;
@@ -35,6 +33,7 @@ $( document ).ready(function() {
       }
     );
 
+    // testimonials select timer
     setInterval(function() {
       var tmp = $("#testimonials .active").next();
       if(tmp.attr("data-slide-to") == undefined) {
@@ -43,8 +42,8 @@ $( document ).ready(function() {
       next_slide(tmp);
     }, 6000);
 
-
-    $('#ctaform form input[type="submit"]').click(function ( event ) {
+    //Prima form collect data and sending form to mailchimp, look mailchimp.js
+    $('#ctaform form button[type="submit"]').click(function ( event ) {
            if ( event ) event.preventDefault();
 
            var $form = $('#ctaform form');
@@ -95,8 +94,9 @@ $( document ).ready(function() {
        });
 });
 
+// Testimonials slider
 function next_slide(e) {
-  var tmp = $("#testimonials .d-md-block" )[0];
+  var tmp = $("#testimonials .content .d-md-block" )[0];
   $("#testimonials").find(tmp).removeClass("d-md-block");
   $("#testimonials").find(tmp).addClass("d-none");
 
@@ -109,6 +109,7 @@ function next_slide(e) {
   $("#testimonials .col-lg-5:nth-child("+dst+")").addClass("d-md-block");
 }
 
+//Switch by inputs fields of prima form
 function next_form(hash) {
   var point = parseInt($("#ctaform .bar span").text());
   var lpoint = parseInt($("#ctaform .bar s").text());
@@ -122,11 +123,11 @@ function next_form(hash) {
   }
 
   if(lpoint == npoint) {
-    $("#ctaform input[type=submit]").removeClass("d-none");
+    $("#ctaform button[type=submit]").removeClass("d-none");
     $("#ctaform a[href*=\\#next]").addClass("disabled");
   }
   if(npoint == (lpoint-1)) {
-    $("#ctaform input[type=submit]").addClass("d-none");
+    $("#ctaform button[type=submit]").addClass("d-none");
     $("#ctaform a[href*=\\#next]").removeClass("disabled");
   }
   if(npoint == 1) $("#ctaform a[href*=\\#prev]").addClass("disabled");
@@ -140,6 +141,7 @@ function next_form(hash) {
 
 }
 
+//Control switch form input tags
 function chform(p, state) {
   if(state=='delete') {
     $("#ctaform .formpoint:nth-child("+p+")").addClass("d-none");
@@ -159,38 +161,3 @@ $(document).scroll(function() {
     $('.scroll-to-top').fadeOut();
   }
 });
-
-// Lang functions
-function langsw() {
-  var ccode = $.cookie("country");
-  var lcode = ["UA","KR"];
-  var sdir = window.location.pathname.split('/')[1];
-
-  if(ccode) {
-    if(sdir && ccode!="EN") {
-      if(sdir!=ccode.toLowerCase()) window.location.href = "/"+ccode.toLowerCase();
-    }
-    else if((sdir || !sdir) && ccode=="EN") {
-      if(sdir) window.location.href = "/";
-    }
-    else {
-      window.location.href = "/"+ccode.toLowerCase();
-    }
-  }
-  else {
-      window.location.href="chlng.html";
-    // $.getJSON("http://ip-api.com/json",
-    //  function (data) {
-    //    var ccode = data.countryCode;
-    //    $.cookie("country", "EN");
-    //    for (var i = 0; i < lcode.length; i++) {
-    //      if(lcode[i]==ccode) {
-    //        $.cookie("country", ccode);
-    //        window.location.href = "/"+ccode.toLowerCase();
-    //      }
-    //    }
-    //    window.location.href = "/";
-    //  }
-    // );
-  }
-}

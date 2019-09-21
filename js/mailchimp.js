@@ -1,3 +1,4 @@
+// Send form to mailchimp 
 function sendanswer($form) {
   $.ajax({
       type: $form.attr('method'),
