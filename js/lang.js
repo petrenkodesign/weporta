@@ -54,7 +54,7 @@ function sw_lang() {
      function (data) {
        ccode = data.countryCode;
        $.cookie("country", ccode);
-       window.location = "/";
+       window.location = "";
      }
    );
   }
